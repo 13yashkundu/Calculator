@@ -1,6 +1,8 @@
 package com.example.ca
 
 import android.os.Bundle
+import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +18,10 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val inputBox = findViewById<EditText>(R.id.input_box)
+        val digitTotal = findViewById<TextView>(R.id.digit_total)
+    }
+    fun addNumber(){
+
     }
 }
