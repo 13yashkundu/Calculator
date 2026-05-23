@@ -11,18 +11,18 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header_title"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="55dp"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calculator"
-            android:textColor="#649FC3"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="sans-serif"
             android:letterSpacing="0.05"
+            android:text="Calculator"
+            android:textColor="#E1000000"
             android:textSize="22sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,11 +48,12 @@
             android:background="@android:color/transparent"
             android:cursorVisible="true"
             android:focusable="false"
+            android:fontFamily="sans-serif-light"
             android:gravity="end"
             android:inputType="none"
+            android:text="16×2"
             android:textColor="#000000"
             android:textSize="54sp"
-            android:fontFamily="sans-serif-light"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="Autofill,LabelFor" />
 
@@ -62,11 +63,12 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
             android:layout_marginTop="5dp"
-            android:gravity="end"
             android:alpha="0.6"
+            android:fontFamily="sans-serif-light"
+            android:gravity="end"
+            android:text="32"
             android:textColor="#282828"
             android:textSize="32sp"
-            android:fontFamily="sans-serif-light"
             app:layout_constraintTop_toBottomOf="@id/input_box"/>
 
         <LinearLayout
@@ -87,60 +89,56 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/delete"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="C"
                     android:textColor="#C53434"
                     android:textSize="24sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="#1BC53434"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/brackets"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="( )"
                     android:textColor="#649FC3"
                     android:textSize="22sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="#3F649FC3"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/percentage"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="%"
                     android:textColor="#649FC3"
                     android:textSize="22sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="#3F649FC3"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/backspace"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
+                    android:padding="0dp"
+                    app:backgroundTint="#3F649FC3"
                     app:icon="@drawable/backspace"
-                    app:iconTint="#649FC3"
                     app:iconGravity="textStart"
                     app:iconSize="24dp"
-                    android:padding="0dp"/>
+                    app:iconTint="#649FC3"/>
             </LinearLayout>
 
             <!-- Row 2 -->
@@ -151,56 +149,52 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key7"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="7"
                     android:textColor="#000000"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp"
+                    app:backgroundTint="#5FFFFFFF"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key8"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="8"
                     android:textColor="#000000"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp"
+                    app:backgroundTint="#5FFFFFFF"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key9"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="9"
                     android:textColor="#000000"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp"
+                    app:backgroundTint="#5FFFFFFF"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/devide"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="÷"
                     android:textColor="#649FC3"
                     android:textSize="28sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="#3F649FC3"/>
             </LinearLayout>
 
             <!-- Row 3 -->
@@ -211,56 +205,52 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key4"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="4"
                     android:textColor="#000000"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp"
+                    app:backgroundTint="#5FFFFFFF"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key5"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="5"
                     android:textColor="#000000"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp"
+                    app:backgroundTint="#5FFFFFFF"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key6"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="6"
                     android:textColor="#000000"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp"
+                    app:backgroundTint="#5FFFFFFF"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/multiply"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="×"
                     android:textColor="#649FC3"
                     android:textSize="28sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="#3F649FC3"/>
             </LinearLayout>
 
             <!-- Row 4 -->
@@ -271,56 +261,52 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key1"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="1"
                     android:textColor="#000000"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp"
+                    app:backgroundTint="#5FFFFFFF"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key2"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="2"
                     android:textColor="#000000"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp"
+                    app:backgroundTint="#5FFFFFFF"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key3"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="3"
                     android:textColor="#000000"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp"
+                    app:backgroundTint="#5FFFFFFF"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/subtract"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="−"
                     android:textColor="#649FC3"
                     android:textSize="28sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="#3F649FC3"/>
             </LinearLayout>
 
             <!-- Row 5 -->
@@ -331,58 +317,54 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/dot"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="."
                     android:textColor="#000000"
                     android:textSize="24sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="#5FFFFFFF"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key0"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="0"
                     android:textColor="#000000"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp"
+                    app:backgroundTint="#5FFFFFFF"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/equal"
                     style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="#649FC3"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="="
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="28sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="#5FFFFFFF"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/add"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
-                    android:layout_margin="6dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    app:backgroundTint="@color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Button.Rounded"
                     android:text="+"
                     android:textColor="#649FC3"
                     android:textSize="28sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="#3F649FC3"/>
             </LinearLayout>
 
         </LinearLayout>
