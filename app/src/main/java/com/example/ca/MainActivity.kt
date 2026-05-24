@@ -2,6 +2,7 @@ package com.example.ca
 
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -111,7 +112,7 @@ class MainActivity : AppCompatActivity() {
             inputBox.text.clear()
             digitTotal.text=""
         }
-        findViewById<MaterialButton>(R.id.backspace).setOnClickListener {
+        findViewById<ImageButton>(R.id.backspace).setOnClickListener {
             val currentText = inputBox.text.toString()
             if (currentText.isNotEmpty()){
                 inputBox.setText(currentText.dropLast(1))
@@ -119,7 +120,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<MaterialButton>(R.id.equal).setOnClickListener {
+            inputBox.text.toString()
 
+            if(inputBox.text.isNotEmpty()){
             val correctExpressions = inputBox.text.toString()
                 .replace("÷", "/")
                 .replace("×", "*")
@@ -133,6 +136,8 @@ class MainActivity : AppCompatActivity() {
             else{
                 digitTotal.text = result.toString()
             }
+        }
+
         }
         }
 
