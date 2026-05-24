@@ -23,6 +23,9 @@ class MainActivity : AppCompatActivity() {
         val inputBox = findViewById<EditText>(R.id.input_box)
         val digitTotal = findViewById<TextView>(R.id.digit_total)
 
+        fun operators(c : Char): Boolean{
+            return c == '+' || c == '-' || c == '×' || c == '÷'
+        }
         findViewById<MaterialButton>(R.id.key0).setOnClickListener{
             inputBox.append("0")
         }
@@ -57,17 +60,52 @@ class MainActivity : AppCompatActivity() {
             inputBox.append(".")
         }
         findViewById<MaterialButton>(R.id.add).setOnClickListener{
+            val text = inputBox.text.toString()
+            if (text.isNotEmpty()){
+                val lastChar = text.last()
 
-            inputBox.append("+")
+                if(operators(lastChar)){
+                    inputBox.setText(text.dropLast(1) + "+")
+                }
+                else{
+                    inputBox.append("+")
+                }
+            }
         }
         findViewById<MaterialButton>(R.id.subtract).setOnClickListener{
-            inputBox.append("-")
+            val text = inputBox.text.toString()
+            if (text.isNotEmpty()){
+                val lastChar = text.last()
+                if(operators(lastChar)){
+                    inputBox.setText(text.dropLast(1) + "-")
+                }
+                else{
+                    inputBox.append("-")
+                }
+            }
         }
-        findViewById<MaterialButton>(R.id.multiply).setOnClickListener{
-            inputBox.append("×")
+        findViewById<MaterialButton>(R.id.multiply).setOnClickListener {
+            val text = inputBox.text.toString()
+            if (text.isNotEmpty()) {
+                val lastChar = text.last()
+                if (operators(lastChar)) {
+                    inputBox.setText(text.dropLast(1) + "×")
+                } else {
+                    inputBox.append("×")
+                }
+            }
         }
         findViewById<MaterialButton>(R.id.devide).setOnClickListener{
-            inputBox.append("÷")
+            val text = inputBox.text.toString()
+            if (text.isNotEmpty()){
+                val lastChar = text.last()
+                if(operators(lastChar)){
+                    inputBox.setText(text.dropLast(1) + "÷")
+                }
+                else{
+                    inputBox.append("÷")
+                }
+            }
         }
         findViewById<MaterialButton>(R.id.delete).setOnClickListener {
             inputBox.text.clear()
