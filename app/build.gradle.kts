@@ -36,6 +36,7 @@ android {
 }
 
 dependencies {
+    implementation("net.objecthunter:exp4j:0.4.8")
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)

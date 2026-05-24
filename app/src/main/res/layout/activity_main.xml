@@ -42,20 +42,18 @@
             android:id="@+id/input_box"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
             android:layout_marginTop="40dp"
-            android:layout_marginEnd="20dp"
             android:background="@android:color/transparent"
             android:cursorVisible="true"
             android:focusable="false"
             android:fontFamily="sans-serif-light"
             android:gravity="end"
             android:inputType="none"
-            android:text="16×2"
             android:textColor="#000000"
             android:textSize="54sp"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="Autofill,LabelFor" />
+            tools:ignore="Autofill,LabelFor"
+            tools:layout_editor_absoluteX="20dp" />
 
         <TextView
             android:id="@+id/digit_total"
@@ -66,10 +64,10 @@
             android:alpha="0.6"
             android:fontFamily="sans-serif-light"
             android:gravity="end"
-            android:text="32"
             android:textColor="#282828"
             android:textSize="32sp"
-            app:layout_constraintTop_toBottomOf="@id/input_box"/>
+            app:layout_constraintTop_toBottomOf="@id/input_box"
+            tools:layout_editor_absoluteX="25dp" />
 
         <LinearLayout
             android:id="@+id/buttons_box"
