@@ -96,7 +96,7 @@
                     android:textColor="#C53434"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    app:backgroundTint="#1BC53434"/>
+                    app:backgroundTint="@color/delete_buttn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/brackets"
@@ -106,10 +106,10 @@
                     android:layout_marginEnd="6dp"
                     android:layout_weight="1"
                     android:text="( )"
-                    android:textColor="#649FC3"
+                    android:textColor="@color/black"
                     android:textSize="22sp"
                     android:textStyle="bold"
-                    app:backgroundTint="#3F649FC3"/>
+                    app:backgroundTint="@color/operators_buttn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/percentage"
@@ -119,10 +119,10 @@
                     android:layout_marginEnd="6dp"
                     android:layout_weight="1"
                     android:text="%"
-                    android:textColor="#649FC3"
+                    android:textColor="@color/black"
                     android:textSize="22sp"
                     android:textStyle="bold"
-                    app:backgroundTint="#3F649FC3"/>
+                    app:backgroundTint="@color/operators_buttn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/backspace"
@@ -132,11 +132,11 @@
                     android:layout_marginEnd="6dp"
                     android:layout_weight="1"
                     android:padding="0dp"
-                    app:backgroundTint="#3F649FC3"
+                    app:backgroundTint="@color/operators_buttn"
                     app:icon="@drawable/backspace"
                     app:iconGravity="textStart"
                     app:iconSize="24dp"
-                    app:iconTint="#649FC3"/>
+                    app:iconTint="@color/black"/>
             </LinearLayout>
 
             <!-- Row 2 -->
@@ -155,7 +155,7 @@
                     android:text="7"
                     android:textColor="#000000"
                     android:textSize="24sp"
-                    app:backgroundTint="#5FFFFFFF"/>
+                    app:backgroundTint="@color/number_buttn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key8"
@@ -167,7 +167,7 @@
                     android:text="8"
                     android:textColor="#000000"
                     android:textSize="24sp"
-                    app:backgroundTint="#5FFFFFFF"/>
+                    app:backgroundTint="@color/number_buttn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key9"
@@ -179,7 +179,7 @@
                     android:text="9"
                     android:textColor="#000000"
                     android:textSize="24sp"
-                    app:backgroundTint="#5FFFFFFF"/>
+                    app:backgroundTint="@color/number_buttn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/devide"
@@ -189,10 +189,10 @@
                     android:layout_marginEnd="6dp"
                     android:layout_weight="1"
                     android:text="÷"
-                    android:textColor="#649FC3"
+                    android:textColor="@color/black"
                     android:textSize="28sp"
                     android:textStyle="bold"
-                    app:backgroundTint="#3F649FC3"/>
+                    app:backgroundTint="@color/operators_buttn"/>
             </LinearLayout>
 
             <!-- Row 3 -->
@@ -211,7 +211,7 @@
                     android:text="4"
                     android:textColor="#000000"
                     android:textSize="24sp"
-                    app:backgroundTint="#5FFFFFFF"/>
+                    app:backgroundTint="@color/number_buttn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key5"
@@ -223,7 +223,7 @@
                     android:text="5"
                     android:textColor="#000000"
                     android:textSize="24sp"
-                    app:backgroundTint="#5FFFFFFF"/>
+                    app:backgroundTint="@color/number_buttn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key6"
@@ -235,7 +235,7 @@
                     android:text="6"
                     android:textColor="#000000"
                     android:textSize="24sp"
-                    app:backgroundTint="#5FFFFFFF"/>
+                    app:backgroundTint="@color/number_buttn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/multiply"
@@ -245,10 +245,10 @@
                     android:layout_marginEnd="6dp"
                     android:layout_weight="1"
                     android:text="×"
-                    android:textColor="#649FC3"
+                    android:textColor="@color/black"
                     android:textSize="28sp"
                     android:textStyle="bold"
-                    app:backgroundTint="#3F649FC3"/>
+                    app:backgroundTint="@color/operators_buttn"/>
             </LinearLayout>
 
             <!-- Row 4 -->
@@ -267,7 +267,7 @@
                     android:text="1"
                     android:textColor="#000000"
                     android:textSize="24sp"
-                    app:backgroundTint="#5FFFFFFF"/>
+                    app:backgroundTint="@color/number_buttn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key2"
@@ -279,7 +279,7 @@
                     android:text="2"
                     android:textColor="#000000"
                     android:textSize="24sp"
-                    app:backgroundTint="#5FFFFFFF"/>
+                    app:backgroundTint="@color/number_buttn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key3"
@@ -291,7 +291,7 @@
                     android:text="3"
                     android:textColor="#000000"
                     android:textSize="24sp"
-                    app:backgroundTint="#5FFFFFFF"/>
+                    app:backgroundTint="@color/number_buttn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/subtract"
@@ -301,10 +301,10 @@
                     android:layout_marginEnd="6dp"
                     android:layout_weight="1"
                     android:text="−"
-                    android:textColor="#649FC3"
+                    android:textColor="@color/black"
                     android:textSize="28sp"
                     android:textStyle="bold"
-                    app:backgroundTint="#3F649FC3"/>
+                    app:backgroundTint="@color/operators_buttn"/>
             </LinearLayout>
 
             <!-- Row 5 -->
@@ -324,7 +324,7 @@
                     android:textColor="#000000"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    app:backgroundTint="#5FFFFFFF"/>
+                    app:backgroundTint="@color/number_buttn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/key0"
@@ -336,7 +336,7 @@
                     android:text="0"
                     android:textColor="#000000"
                     android:textSize="24sp"
-                    app:backgroundTint="#5FFFFFFF"/>
+                    app:backgroundTint="@color/number_buttn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/equal"
@@ -349,7 +349,7 @@
                     android:textColor="@color/black"
                     android:textSize="28sp"
                     android:textStyle="bold"
-                    app:backgroundTint="#5FFFFFFF"/>
+                    app:backgroundTint="@color/operators_buttn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/add"
@@ -359,10 +359,10 @@
                     android:layout_marginEnd="6dp"
                     android:layout_weight="1"
                     android:text="+"
-                    android:textColor="#649FC3"
+                    android:textColor="@color/black"
                     android:textSize="28sp"
                     android:textStyle="bold"
-                    app:backgroundTint="#3F649FC3"/>
+                    app:backgroundTint="@color/operators_buttn"/>
             </LinearLayout>
 
         </LinearLayout>
