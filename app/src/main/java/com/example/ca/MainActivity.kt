@@ -10,6 +10,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.button.MaterialButton
 import net.objecthunter.exp4j.ExpressionBuilder
+import kotlin.text.isNotEmpty
+import kotlin.text.last
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         val digitTotal = findViewById<TextView>(R.id.digit_total)
 
         fun operators(c : Char): Boolean{
-            return c == '+' || c == '-' || c == '×' || c == '÷'
+            return c == '+' || c == '-' || c == '×' || c == '÷' || c =='.'
         }
         findViewById<MaterialButton>(R.id.key0).setOnClickListener{
             inputBox.append("0")
@@ -57,8 +59,16 @@ class MainActivity : AppCompatActivity() {
         findViewById<MaterialButton>(R.id.key9).setOnClickListener{
             inputBox.append("9")
         }
-        findViewById<MaterialButton>(R.id.dot).setOnClickListener{
-            inputBox.append(".")
+        findViewById<MaterialButton>(R.id.dot).setOnClickListener {
+            val text = inputBox.text.toString()
+            if (text.isNotEmpty()){
+                val lastChar = text.last()
+                if(operators(lastChar)){
+                    inputBox.append("0.")
+                }else{
+                    inputBox.append("0.")
+                }
+            }
         }
         findViewById<MaterialButton>(R.id.add).setOnClickListener{
             val text = inputBox.text.toString()
@@ -127,6 +137,7 @@ class MainActivity : AppCompatActivity() {
                 .replace("÷", "/")
                 .replace("×", "*")
                 .replace("−", "-")
+
             val expressions = ExpressionBuilder(correctExpressions).build()
             val result = expressions.evaluate()
             val longResult = result.toLong()

@@ -9,6 +9,8 @@
 /.idea/assetWizardSettings.xml
 .DS_Store
 /build
+app/src/main/res/layout/activity_main2.xml
+app/src/main/java/com/example/ca/MainActivity2.kt
 /captures
 .externalNativeBuild
 .cxx
