@@ -3,11 +3,9 @@ package com.example.ca
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.button.MaterialButton
@@ -152,23 +150,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         }
-
-        val menu_item = findViewById<ConstraintLayout>(R.id.menu_items)
-        findViewById<ImageButton>(R.id.menu_buttn).setOnClickListener {
-            if (menu_item.visibility == android.view.View.VISIBLE) {
-                menu_item.visibility = android.view.View.GONE
-            }else{
-                menu_item.visibility = android.view.View.VISIBLE
-            }
         }
 
-        findViewById<ConstraintLayout>(R.id.body_main).setOnClickListener {
-            if (menu_item.visibility == android.view.View.VISIBLE){
-                menu_item.visibility = android.view.View.GONE
-            }
-        }
-
-
-
-        }
     }
