@@ -28,19 +28,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        <ImageButton
-            android:id="@+id/menu_buttn"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="20dp"
-            android:backgroundTint="@android:color/transparent"
-            android:src="@drawable/menu_buttn"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -48,8 +35,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/rounded_body_background"
-        android:clickable="true"
-        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_title">
 
@@ -381,68 +366,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/menu_items"
-        android:layout_width="110dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:background = "@drawable/button_background"
-        android:backgroundTint="@color/operators_buttn"
-        android:elevation="10dp"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-<!--        <ImageButton-->
-<!--            android:id="@+id/cancel_button"-->
-<!--            android:layout_width="28dp"-->
-<!--            android:layout_height="28dp"-->
-<!--            android:src="@drawable/cancel_buttn"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:backgroundTint="@android:color/transparent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"/>-->
-
-        <LinearLayout
-            android:id="@+id/history_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageButton
-                android:layout_width="29dp"
-                android:layout_height="29dp"
-                android:backgroundTint="@android:color/transparent"
-                android:src="@drawable/history_buttn"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:text="History"
-                android:textColor="@color/black"
-                android:textSize="17sp"/>
-
-        </LinearLayout>
-
-
-        <View
-            android:id="@+id/line1"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/white"
-            app:layout_constraintTop_toBottomOf="@+id/history_icon"/>
-
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
