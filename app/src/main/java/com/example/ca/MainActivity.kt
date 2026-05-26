@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -26,71 +27,72 @@ class MainActivity : AppCompatActivity() {
         val inputBox = findViewById<EditText>(R.id.input_box)
         val digitTotal = findViewById<TextView>(R.id.digit_total)
 
-        fun operators(c : Char): Boolean{
-            return c == '+' || c == '-' || c == '×' || c == '÷' || c =='.'
+        fun operators(c: Char): Boolean {
+            return c == '+' || c == '-' || c == '×' || c == '÷' || c == '.'
         }
-        findViewById<MaterialButton>(R.id.key0).setOnClickListener{
+        findViewById<MaterialButton>(R.id.key0).setOnClickListener {
             inputBox.append("0")
         }
-        findViewById<MaterialButton>(R.id.key1).setOnClickListener{
+        findViewById<MaterialButton>(R.id.key1).setOnClickListener {
             inputBox.append("1")
         }
-        findViewById<MaterialButton>(R.id.key2).setOnClickListener{
+        findViewById<MaterialButton>(R.id.key2).setOnClickListener {
             inputBox.append("2")
         }
-        findViewById<MaterialButton>(R.id.key3).setOnClickListener{
+        findViewById<MaterialButton>(R.id.key3).setOnClickListener {
             inputBox.append("3")
         }
-        findViewById<MaterialButton>(R.id.key4).setOnClickListener{
+        findViewById<MaterialButton>(R.id.key4).setOnClickListener {
             inputBox.append("4")
         }
-        findViewById<MaterialButton>(R.id.key5).setOnClickListener{
+        findViewById<MaterialButton>(R.id.key5).setOnClickListener {
             inputBox.append("5")
         }
-        findViewById<MaterialButton>(R.id.key6).setOnClickListener{
+        findViewById<MaterialButton>(R.id.key6).setOnClickListener {
             inputBox.append("6")
         }
-        findViewById<MaterialButton>(R.id.key7).setOnClickListener{
+        findViewById<MaterialButton>(R.id.key7).setOnClickListener {
             inputBox.append("7")
         }
-        findViewById<MaterialButton>(R.id.key8).setOnClickListener{
+        findViewById<MaterialButton>(R.id.key8).setOnClickListener {
             inputBox.append("8")
         }
-        findViewById<MaterialButton>(R.id.key9).setOnClickListener{
+        findViewById<MaterialButton>(R.id.key9).setOnClickListener {
             inputBox.append("9")
         }
+
+
+
         findViewById<MaterialButton>(R.id.dot).setOnClickListener {
             val text = inputBox.text.toString()
-            if (text.isNotEmpty()){
+            if (text.isNotEmpty()) {
                 val lastChar = text.last()
-                if(operators(lastChar)){
+                if (operators(lastChar)) {
                     inputBox.append("0.")
-                }else{
-                    inputBox.append("0.")
+                } else {
+                    inputBox.append(".")
                 }
             }
         }
-        findViewById<MaterialButton>(R.id.add).setOnClickListener{
+        findViewById<MaterialButton>(R.id.add).setOnClickListener {
             val text = inputBox.text.toString()
-            if (text.isNotEmpty()){
+            if (text.isNotEmpty()) {
                 val lastChar = text.last()
 
-                if(operators(lastChar)){
+                if (operators(lastChar)) {
                     inputBox.setText(text.dropLast(1) + "+")
-                }
-                else{
+                } else {
                     inputBox.append("+")
                 }
             }
         }
-        findViewById<MaterialButton>(R.id.subtract).setOnClickListener{
+        findViewById<MaterialButton>(R.id.subtract).setOnClickListener {
             val text = inputBox.text.toString()
-            if (text.isNotEmpty()){
+            if (text.isNotEmpty()) {
                 val lastChar = text.last()
-                if(operators(lastChar)){
+                if (operators(lastChar)) {
                     inputBox.setText(text.dropLast(1) + "-")
-                }
-                else{
+                } else {
                     inputBox.append("-")
                 }
             }
@@ -106,50 +108,84 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        findViewById<MaterialButton>(R.id.devide).setOnClickListener{
+        findViewById<MaterialButton>(R.id.devide).setOnClickListener {
             val text = inputBox.text.toString()
-            if (text.isNotEmpty()){
+            if (text.isNotEmpty()) {
                 val lastChar = text.last()
-                if(operators(lastChar)){
+                if (operators(lastChar)) {
                     inputBox.setText(text.dropLast(1) + "÷")
-                }
-                else{
+                } else {
                     inputBox.append("÷")
                 }
             }
         }
+
+        findViewById<MaterialButton>(R.id.percentage).setOnClickListener {
+            val text = inputBox.text.toString()
+            try {
+                if (text.isNotEmpty()) {
+                    inputBox.append("%")
+                }
+            }catch (ex : Exception){
+                Toast.makeText(this, "Invalid format used", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        findViewById<MaterialButton>(R.id.brackets).setOnClickListener {
+            val text = inputBox.text.toString()
+            if (text.isEmpty()) {
+                inputBox.append("(")
+            } else {
+                val lastDigit = text.last()
+                val openBracket = text.count { it == '(' }
+                val closeBracket = text.count { it == ')' }
+                if (openBracket > closeBracket && (lastDigit.isDigit() || lastDigit == ')')) {
+                    inputBox.append(")")
+                } else {
+                    inputBox.append("(")
+                }
+            }
+        }
+
         findViewById<MaterialButton>(R.id.delete).setOnClickListener {
             inputBox.text.clear()
-            digitTotal.text=""
+            digitTotal.text = ""
         }
         findViewById<ImageButton>(R.id.backspace).setOnClickListener {
             val currentText = inputBox.text.toString()
-            if (currentText.isNotEmpty()){
+            if (currentText.isNotEmpty()) {
                 inputBox.setText(currentText.dropLast(1))
+
+                if (inputBox.text.isEmpty()){
+                    digitTotal.text = ""
+                }
             }
         }
 
         findViewById<MaterialButton>(R.id.equal).setOnClickListener {
             inputBox.text.toString()
+            try {
+                if (inputBox.text.isNotEmpty()) {
+                    val correctExpressions = inputBox.text.toString()
+                        .replace("÷", "/")
+                        .replace("×", "*")
+                        .replace("−", "-")
 
-            if(inputBox.text.isNotEmpty()){
-            val correctExpressions = inputBox.text.toString()
-                .replace("÷", "/")
-                .replace("×", "*")
-                .replace("−", "-")
+                    val expressions = ExpressionBuilder(correctExpressions).build()
+                    val result = expressions.evaluate()
+                    val longResult = result.toLong()
+                    if (result == longResult.toDouble()) {
+                        digitTotal.text = longResult.toString()
+                    } else {
+                        digitTotal.text = result.toString()
+                    }
+                }
 
-            val expressions = ExpressionBuilder(correctExpressions).build()
-            val result = expressions.evaluate()
-            val longResult = result.toLong()
-            if(result == longResult.toDouble()){
-                digitTotal.text = longResult.toString()
+            } catch (ex: Exception) {
+                Toast.makeText(this, "Invalid format used", Toast.LENGTH_SHORT).show()
             }
-            else{
-                digitTotal.text = result.toString()
-            }
-        }
+
 
         }
-        }
-
+    }
     }
