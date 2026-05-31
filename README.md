@@ -7,7 +7,8 @@ A simple and elegant calculator application built with **Kotlin**. Perform basic
 ✨ **Basic Operations** - Addition, subtraction, multiplication, and division  
 🎯 **Clean Interface** - Intuitive and user-friendly design  
 
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/81b4b482-8aa0-43b6-8bdd-38088f36eb9d" />
+<img width="190" height="410" alt="image" src="https://github.com/user-attachments/assets/97377126-6a08-4105-93e3-ebf1d02d96d5" />
+
 
 
 ## Getting Started
