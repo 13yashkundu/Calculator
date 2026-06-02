@@ -11,8 +11,6 @@ A simple and elegant calculator application built with **Kotlin**. Perform basic
 
 
 
-## Getting Started
-
 ### Prerequisites
 
 - Kotlin Runtime Environment
